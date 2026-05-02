@@ -5,6 +5,10 @@ html {
     background-color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'source sans pro', sans-serif;
 }
