@@ -3,8 +3,8 @@ async function go() {
     const weatherData = await weatherPromise.json()
 
     const temperature = weatherData.properties.periods[0].temperature
+    document.querySelector("#current-temp").textContent = temperature
 
-    console.log(temperature)
 }
 
 go()
