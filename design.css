@@ -171,6 +171,17 @@ body {
     font-family: 'source sans pro', sans-serif;
     font-size: 1.15rem;
     color: #9F9F9F;
+    cursor: pointer;
+}
+
+.mid-section button:hover {
+    color: #7D7D7D;
+}
+
+.mid-section .active,
+.mid-section .active:hover {
+    color: #475AFF;
+    text-decoration: underline;
 }
 
 .footer p {
