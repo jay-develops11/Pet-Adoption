@@ -18,6 +18,8 @@ async function petsArea() {
     petsData.forEach(pet => {
         const clone = template.content.cloneNode(true)
 
+        clone.querySelector(".pet-cards").dataset.species = pet.species
+
         clone.querySelector("h3").textContent = pet.name
         clone.querySelector(".pet-description").textContent = pet.description
         clone.querySelector(".pet-age").textContent = ageText(pet.birthYear)
@@ -60,4 +62,12 @@ function buttonClick(ev) {
     ev.target.classList.add("active")
 
     // filter the pets based on the button clicked
+    const filter = ev.target.dataset.moon
+    document.querySelectorAll(".pet-cards").forEach(lu => {
+        if (filter == lu.dataset.species || filter == "all") {
+            lu.style.display = "grid"
+        } else {
+            lu.style.display = "none"
+        }
+    })
 }
