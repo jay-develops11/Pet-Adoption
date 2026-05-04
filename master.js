@@ -44,3 +44,20 @@ function ageText(birthYear) {
 
     return `${age} years old`
 }
+
+// mid section buttons
+const allButtons = document.querySelectorAll(".mid-section button")
+
+allButtons.forEach(lu => {
+    lu.addEventListener("click", buttonClick)
+})
+
+function buttonClick(ev) {
+    // remove active class from all buttons
+    allButtons.forEach(lu => lu.classList.remove("active"))
+
+    // add active class to the clicked button
+    ev.target.classList.add("active")
+
+    // filter the pets based on the button clicked
+}
